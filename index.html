@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<!--
+This is a starter template page. Use this page to start your new project from
+scratch. This page gets rid of all links and provides the needed markup only.
+-->
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <title>Validator</title>
+    <!-- Font Awesome Icons -->
+    <link
+      rel="stylesheet"
+      href="https://receiptrd.herokuapp.com/plugins/fontawesome-free/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://receiptrd.herokuapp.com/dist/css/reset.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://receiptrd.herokuapp.com/dist/css/zoomist.css"
+    />
+    <!-- Theme style -->
+    <link
+      rel="stylesheet"
+      href="https://receiptrd.herokuapp.com/dist/css/adminlte.min.css"
+    />
+    <!-- Google Font: Source Sans Pro -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body class="hold-transition sidebar-mini sidebar-collapse">
+    <div class="wrapper">
+      <!-- Navbar -->
+      <nav class="main-header navbar navbar-expand navbar-white navbar-light">
+        <!-- Left navbar links -->
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" data-widget="pushmenu" href="#" role="button">
+              <i class="fas fa-bars"></i>
+            </a>
+          </li>
+          <li class="nav-item d-none d-sm-inline-block">
+            <a href="#" class="nav-link">Home</a>
+          </li>
+        </ul>
+      </nav>
+      <!-- /.navbar -->
+      <!-- Main Sidebar Container -->
+      <aside class="main-sidebar sidebar-dark-primary elevation-4">
+        <!-- Brand Logo -->
+        <a href="index3.html" class="brand-link">
+          <img
+            src="https://receiptrd.herokuapp.com/dist/img/AdminLTELogo.png"
+            alt="Validator Logo"
+            class="brand-image img-circle elevation-3"
+            style="opacity: 0.8"
+          />
+          <span class="brand-text font-weight-light">Validator</span>
+        </a>
+        <!-- Sidebar -->
+        <div class="sidebar">
+          <!-- Sidebar user panel (optional) -->
+          <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+            <div class="image">
+              <img
+                src="https://receiptrd.herokuapp.com/dist/img/user2-160x160.jpg"
+                class="img-circle elevation-2"
+                alt="User Image"
+              />
+            </div>
+            <div class="info">
+              <a href="#" class="d-block">Alexander Pierce</a>
+            </div>
+          </div>
+          <!-- Sidebar Menu -->
+          <nav class="mt-2">
+            <ul
+              class="nav nav-pills nav-sidebar flex-column"
+              data-widget="treeview"
+              role="menu"
+              data-accordion="false"
+            >
+              <!-- Add icons to the links using the .nav-icon class
+               with font-awesome or any other icon font library -->
+              <li class="nav-item has-treeview menu-open">
+                <a href="#" class="nav-link active">
+                  <i class="nav-icon fas fa-tachometer-alt"></i>
+                  <p>
+                    <i class="right fas fa-angle-left"></i>
+                  </p>
+                </a>
+                <ul class="nav nav-treeview">
+                  <li class="nav-item">
+                    <a href="#" class="nav-link active">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>Active Page</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="#" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>Inactive Page</p>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <i class="nav-icon fas fa-th"></i>
+                  <p>
+                    Simple Link
+                    <span class="right badge badge-danger">New</span>
+                  </p>
+                </a>
+              </li>
+            </ul>
+          </nav>
+          <!-- /.sidebar-menu -->
+        </div>
+        <!-- /.sidebar -->
+      </aside>
+      <!-- Content Wrapper. Contains page content -->
+      <div class="content-wrapper">
+        <!-- Content Header (Page header) -->
+        <div class="content-header">
+          <div class="container-fluid">
+            <div class="row mb-2">
+              <div class="col-sm-6">
+                <h1 class="m-0 text-dark">Data Validation</h1>
+              </div>
+
+              <!-- /.col -->
+              <div class="col-sm-6">
+                <ol class="breadcrumb float-sm-right">
+                  <li class="breadcrumb-item">
+                    <a href="#">Home</a>
+                  </li>
+                  <li class="breadcrumb-item active">Starter Page</li>
+                </ol>
+              </div>
+              <!-- /.col -->
+            </div>
+            <!-- /.row -->
+          </div>
+          <!-- /.container-fluid -->
+        </div>
+        <!-- /.content-header -->
+        <!-- Main content -->
+        <div class="content">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="row content">
+                <div class="col-sm-2">
+                  <div class="card">
+                    <div class="card-header">
+                      <h3 class="card-title">Scanned Text</h3>
+                    </div>
+                    <div class="card-body">
+                      <p id="scanned_text">
+                        Compatia Dominicana de Teléfonos, S.A RNC10110019577,
+                        Registo Mercad No 24880 Fecha de Factura: Octubre 13,
+                        2022 RNC Clienta: 75203487965 Factura de Crédito Fiscal
+                        Electrónica Cuenta:790894650 HO E310008313310
+                        Vencimiento e-NDF:31-12-2022 Nombre Razón Social: PASE A
+                        PRODUCCION PPS1 18 9 2022 Pagina 1 de 1 Factura No:1
+                        Resumen de Factura Para información sobre : Factura Mes
+                        Anterior ROS) cargos, si es consumidor lanar al 809
+                        220-1111 y si es negocio o Balance anterior $8.00
+                        gobierno llamar al 809 220-1212, Ajustes vio Pacos
+                        Recibidos 0.20 0R gratis desde cualquier lugar del
+                        Balance Mes Anterior $8.00 ca's Factura del Mes ROS Oros
+                        Cargos 2615.00 Renta Servicios De Datos 5,185.67 Otros
+                        créditos a descuentos - 4985.83 Su crotal $221454
+                        ITBIS-18%, 506.57 COT-2% 4.00 ISC-10% 1998 Total del Mes
+                        $3346.48
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-8 text-left">
+                  <div class="card">
+                    <div class="card-header">
+                      <h3 class="card-title">Image</h3>
+                    </div>
+                    <div class="card-body">
+                      <div class="div-container">
+                        <div class="div-wrapper">
+                          <div
+                            data-zoomist
+                            data-zoomist-src="https://ucarecdn.com/7e1f876a-5684-4564-961b-2809bb127d73/-/preview/-/quality/smart/-/format/auto/"
+                          ></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-2 sidenav">
+                  <div class="card">
+                    <div class="card-header">
+                      <h3 class="card-title">Form to fill</h3>
+                    </div>
+                    <div class="card-body">
+                      <form>
+                        <div class="form-group mb-3">
+                          <div class="form-group-prepend">
+                            <span class="form-group-text">RNC</span>
+                          </div>
+                          <input
+                            id="inpt_rnc"
+                            type="text"
+                            class="form-control"
+                          />
+                          <div class="form-group-prepend">
+                            <span class="form-group-text">NCF</span>
+                          </div>
+                          <input
+                            id="inpt_ncf"
+                            type="text"
+                            class="form-control"
+                          />
+                          <div class="form-group-prepend">
+                            <span class="form-group-text">FECHA AAAAMMDD</span>
+                          </div>
+                          <input
+                            id="inpt_fecha"
+                            type="text"
+                            class="form-control"
+                          />
+                          <div class="form-group-prepend">
+                            <span class="form-group-text">ITBIS (18%)</span>
+                          </div>
+                          <input
+                            id="inpt_monto_facturado"
+                            type="text"
+                            class="form-control"
+                          />
+                          <div class="form-group-prepend">
+                            <span class="form-group-text">MONTO FACTURADO</span>
+                          </div>
+                          <input
+                            id="inpt_field_last"
+                            type="text"
+                            class="form-control"
+                          />
+                        </div>
+                        <p id="output"></p>
+                      </form>
+                    </div>
+                    <div class="card-footer">
+                      <button type="submit" class="btn btn-primary">
+                        Submit
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- /.row -->
+          </div>
+          <!-- /.container-fluid -->
+        </div>
+        <!-- /.content -->
+      </div>
+      <!-- /.content-wrapper -->
+      <!-- Control Sidebar -->
+      <aside class="control-sidebar control-sidebar-dark">
+        <!-- Control sidebar content goes here -->
+        <div class="p-3">
+          <h5>Title</h5>
+          <p>Sidebar content</p>
+        </div>
+      </aside>
+      <!-- /.control-sidebar -->
+      <!-- Main Footer -->
+      <footer class="main-footer">
+        <!-- To the right -->
+        <div class="float-right d-none d-sm-inline">Anything you want</div>
+        <!-- Default to the left -->
+        <strong
+          >Copyright &copy; 2014-2019
+          <a href="https://adminlte.io">AdminLTE.io</a>.
+        </strong>
+        All rights reserved.
+      </footer>
+    </div>
+    <!-- ./wrapper -->
+    <!-- REQUIRED SCRIPTS -->
+    <!-- jQuery -->
+    <script src="https://receiptrd.herokuapp.com/plugins/jquery/jquery.min.js"></script>
+    <!-- Bootstrap 4 -->
+    <script src="https://receiptrd.herokuapp.com/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- AdminLTE App -->
+    <script src="https://receiptrd.herokuapp.com/dist/js/adminlte.min.js"></script>
+    <script src="https://receiptrd.herokuapp.com/dist/js/zoomist.js"></script>
+    <script
+      defer
+      src="https://receiptrd.herokuapp.com/dist/js/test.js"
+    ></script>
+  </body>
+  <script>
+    //const record = {RNC:"999", NCF:"50000000", FECHA:"", ITBIS:63.00, MONTO_FACTURADO:350.00};
+    //document.getElementById('inpt_rnc').value=record.RNC;
+
+    // INITIALIZATION
+    var fields = {
+      inpt_rnc: document.getElementById("inpt_rnc"),
+      inpt_ncf: document.getElementById("inpt_ncf"),
+      inpt_fecha: document.getElementById("inpt_fecha"),
+      inpt_monto_facturado: document.getElementById("inpt_monto_facturado"),
+      inpt_field_last: document.getElementById("inpt_field_last"),
+    };
+
+    function modifyLock(node) {
+      if (node.value.length == 0) {
+        lock = 0;
+      } else {
+        lock = 1;
+      }
+    }
+
+    var focusedField = ""; //Input field that is focused
+    var lock = 0; //0 if there is no value // 1 if there is value
+
+    var form_fields = document.querySelectorAll(".form-control");
+    for (var i = 0; i < form_fields.length; i++) {
+      form_fields[i].addEventListener("focus", function () {
+        focusedField = this.id;
+        modifyLock(this);
+      });
+
+      //MAKING FIELD AVAILABLE IF FIELD IS MADE EMPTY MANUALLY BY KEY PRESS
+      form_fields[i].addEventListener("keyup", function () {
+        modifyLock(this);
+      });
+    }
+
+    const output = document.getElementById("output");
+    document.addEventListener("mouseup", () => {
+      //Selected Text
+
+      var selectedText = window.getSelection().toString();
+      output.textContent = selectedText;
+
+      // MOUSEUP EVENT FOR SELECTED / HIGHLIGHTED TEXT
+      if (focusedField.length != 0 && lock == 0 && selectedText.length != 0) {
+        fields[focusedField].value = selectedText;
+        lock = 1;
+      }
+    });
+
+    //
+    var scanned_text = document.getElementById("scanned_text");
+    let reg = /\d+/g;
+    scanned_text.innerHTML = scanned_text.textContent.replace(
+      reg,
+      (match) => `<strong><mark>${match}</mark></strong>`
+    );
+    document.getElementById("inpt_rnc").value = output.textContent;
+  </script>
+</html>
